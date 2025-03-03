@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 1.125rem;
   line-height: 1.75;
   color: #333;
@@ -40,18 +40,16 @@ a:hover {
     width: 69.0625rem;
     margin: 0 auto;
   }
-} 
+}
 
 /* 共通のスタイル
 ------------------------------------------------------------*/
 
-/* タイトル */
-.section-heading {
+.section__heading {
   text-align: left;
 }
 
-.section-title,
-.section-title-reverse {
+.section__title {
   display: flex;
   font-family: Emblema One;
   color: #fff;
@@ -60,22 +58,22 @@ a:hover {
   font-weight: normal;
 }
 
-.section-title:first-child {
+.section__title:first-child {
   padding-top: 8.75rem;
 }
 
-.sp-nav, .pc-nav a {
+.nav--sp, .nav--pc a {
   text-decoration: none;
 }
 
 @media (min-width: 768px) {
-  .section-title {
+  .section__title {
     padding-top: 6.25rem;
     padding-bottom: 2.5rem;
     font-size: 5rem;
   }
 
-  .nextline {
+  .text--break {
     display: none;
   }
 }
@@ -98,8 +96,8 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .header-logo {
-  margin-left: 5rem;
+  .header__logo {
+    margin-left: 5rem;
   }
 }
 
@@ -114,7 +112,7 @@ a:hover {
 }
 
 /* ハンバーガーメニューボタン */
-.hamburger-button {
+.header__hamburger {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,13 +125,13 @@ a:hover {
 
 /* PCでの表示なし */
 @media (min-width: 890px) {
-  .hamburger-button {
+  .header__hamburger {
     display: none;
   }
 }
 
 /* SPナビゲーション */
-.sp-nav {
+.nav--sp {
   position: absolute;
   top: 3.75rem;
   left: 0;
@@ -150,29 +148,28 @@ a:hover {
   box-sizing: border-box;
 }
 
-.sp-nav-list {
+.nav__list--sp {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-.sp-nav-list li {
+.nav__list--sp li {
   margin-bottom: 2.5rem;
 }
 
 /* PCナビゲーション */
-
-.pc-nav {
+.nav--pc {
   display: none;
 }
 
 @media (min-width: 890px) {
-  .pc-nav {
+  .nav--pc {
     display: block;
   }
 }
 
-.pc-nav-list {
+.nav__list--pc {
   display: flex;
   align-items: center;
   font-size: 1.75rem;
@@ -183,7 +180,7 @@ a:hover {
   list-style: none;
 }
 
-.pc-nav-list li {
+.nav__list--pc li {
   margin: 0 0 0 3.125rem;
 }
 
@@ -198,23 +195,23 @@ a:hover {
   color: #fff;
 }
 
-.carousel img {
+.cover__carousel img {
   display: flex;
   align-items: center;
   width: 100%;
   height: 25.625rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 768px) {
-  .cover,
-  .carousel img {
+  .cover, .cover__carousel img {
     height: 43.75rem;
     background-size: cover;
   }
 }
 
-.catch {
+.cover__catch {
   display: block;
   position: absolute;
   top: 5rem;
@@ -227,11 +224,11 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .catch {
+  .cover__catch {
     display: block;
     position: absolute;
     top: 23.125rem;
-    left: 43.75rem;
+    left: 50.75rem;
   }
 }
 
@@ -243,27 +240,26 @@ a:hover {
   height: 24.5625rem;
   vertical-align: bottom;
   margin-bottom: 1.875rem;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-.about-item-body-text,
-.about-item-body-license {
+.about__text, .about__license {
   padding-left: 1.125rem;
 }
 
-.about-item-body-text p {
+.about__text p {
   padding-bottom: 2.8125rem;
 }
-
-.about-item-body-text p:last-child {
+.about__text p:last-child {
   padding-bottom: 0;
 }
 
-.about-item-body-license {
+.about__license {
   padding-top: 4.375rem;
 }
 
-.license-title {
+.about__license-title {
   font-size: 1.25rem;
   font-weight: bold;
   margin-top: 4.375rem;
@@ -275,11 +271,11 @@ a:hover {
     height: 540px;
   }
 
-  .about-item-body {
+  .about__body {
     display: flex;
   }
 
-  .about-item-body-content {
+  .about__content {
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -290,63 +286,63 @@ a:hover {
 /* Timeline
 ------------------------------------------------------------*/
 
-.timeline-list {
+.timeline__list {
   display: flex;
 }
 
-.timeline-list-date {
+.timeline__date {
   width: 42%;
   font-size: 1.1875rem;
   padding-right: 1.875rem;
 }
 
-.timeline-list-content {
+.timeline__content {
   width: 63%;
   font-size: 1rem;
-  border-left: .5625rem solid #fff;
+  border-left: 0.5625rem solid #fff;
   position: relative;
 }
 
-.timeline-list-content p {
+.timeline__content p {
   padding-left: 1.875rem;
   padding-bottom: 1.875rem;
 }
 
-.timeline-list-content::before {
-  content: '';
+.timeline__content::before {
+  content: "";
   width: 1.5625rem;
   height: 1.5625rem;
   background: #333;
   position: absolute;
   left: -1rem;
-  top: .375rem;
+  top: 0.375rem;
   border-radius: 100%;
 }
 
 @media (min-width: 768px) {
-  .timeline-list-date {
+  .timeline__date {
     width: 17%;
     font-size: 1.5rem;
     padding-right: 3.125rem;
   }
 
-  .timeline-list-content {
+  .timeline__content {
     width: 83%;
     font-size: 1.375rem;
   }
 
-  .timeline-list-content::before {
-    content: '';
+  .timeline__content::before {
+    content: "";
     width: 1.5625rem;
     height: 1.5625rem;
     background: #333;
     position: absolute;
     left: -1rem;
-    top: .53em;
+    top: 0.53em;
     border-radius: 100%;
   }
 
-  .timeline-list-content p {
+  .timeline__content p {
     padding-left: 5rem;
   }
 }
@@ -354,7 +350,7 @@ a:hover {
 /* Works
 ------------------------------------------------------------*/
 
-.works-title {
+.works__title {
   display: flex;
   font-family: Emblema One;
   color: #fff;
@@ -363,44 +359,45 @@ a:hover {
   margin-left: 2rem;
 }
 
-.works-description {
+.works__description {
   margin: 2rem 0rem;
 }
 
-.image-container {
+.works__container {
   padding: 0 1.25rem;
 }
 
-.image-box {
+.works__item {
   margin-bottom: 2rem;
-} 
-
-.image-box img {
-  width: 100%;
-  object-fit: cover;
 }
 
-.figcaption-title {
+.works__item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.works__caption-title {
   font-size: 1.2rem;
   font-weight: bold;
   text-align: center;
   margin: 1rem;
 }
 
-.figcaption {
+.works__caption {
   margin-bottom: 2rem;
   font-size: 1rem;
 }
 
 /* サムネイル画像のスタイル */
-.gallery img {
+.works__gallery img {
   width: 300px;
   height: 200px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
 
-.gallery img:hover {
+.works__gallery img:hover {
   transform: scale(1.05);
 }
 
@@ -411,18 +408,18 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
   /* 背景の暗いオーバーレイ */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  opacity: 0; /* 初期状態は非表示 */
+  opacity: 0;
+  /* 初期状態は非表示 */
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
-/* ポップアップが表示されたときの状態 */
 .popup:target {
   opacity: 1;
   pointer-events: auto;
@@ -441,11 +438,13 @@ a:hover {
 /* ポップアップコンテンツ全体のスタイル */
 .popup-content {
   position: relative;
-  background-color: #fff; /* 白背景 */
+  background-color: #fff;
   width: 90%;
   max-width: 600px;
-  max-height: 80%; /* 縦長対応のスクロール設定 */
-  overflow-y: auto; /* 縦スクロール有効化 */
+  max-height: 80%;
+  /* 縦長対応のスクロール設定 */
+  overflow-y: auto;
+  /* 縦スクロール有効化 */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -475,119 +474,120 @@ a:hover {
 
 /* 閉じるボタンのスタイル */
 .close-btn {
-  display: inline-block; /* ボタンをインラインブロックに設定 */
-  color: #333; /* 黒い文字 */
-  border: 1px solid #333; /* 黒い枠線 */
-  border-radius: 3px; /* 角を軽く丸める */
-  padding: 1px 4px; /* 文字周りの余白 */
-  font-size: 14px; /* フォントサイズ */
-  text-decoration: none; /* 下線をなくす */
+  display: inline-block;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 3px;
+  padding: 1px 4px;
+  font-size: 14px;
+  text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s ease; /* ホバー時のアニメーション */
-  line-height: 1; /* 縦方向の余白を詰める */
-  margin: 0 auto; /* 必要に応じてセンタリング */
+  transition: all 0.3s ease;
+  line-height: 1;
+  /* 縦方向の余白を詰める */
+  margin: 0 auto;
 }
 
 .close-btn:hover {
-  background-color: #f0f0f0; /* ホバー時の薄い背景色 */
+  background-color: #f0f0f0;
 }
 
 @media (min-width: 768px) {
-  .works-description {
+  .works__description {
     margin: 3rem;
   }
 
-  .image-container {
+  .works__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 1.875rem;
   }
 
-  .figcaption {
+  .works__caption {
     padding: 0 1.875rem;
     margin-top: 0;
     margin-bottom: 2rem;
   }
 
-  .image-box {
+  .works__item {
     width: 33.33%;
     text-align: center;
   }
 
-  .image-box img {
-      width: 100%;
-      padding: 0 1rem;
+  .works__item img {
+    width: 100%;
+    padding: 0 1rem;
   }
 }
 
 /* Contact
 ------------------------------------------------------------*/
 
-.contact_description {
+.contact__description {
   margin: 0 1.1875rem;
   margin-bottom: 3.125rem;
   text-align: left;
 }
 
-.contact_button {
+.contact__buttons {
   margin: 3.125rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  column-gap: 3.4375rem;
+  -moz-column-gap: 3.4375rem;
+       column-gap: 3.4375rem;
 }
 
-.contact_button li {
+.contact__buttons li {
   list-style: none;
 }
 
-.contact_button a {
+.contact__buttons a {
   display: block;
   position: relative;
   width: 2.5rem;
   height: 2.5rem;
   padding: 0.625rem;
-  /* 10px */
   line-height: 0;
-  color: #fff;  
+  color: #fff;
   background-color: #333;
   border-radius: 50%;
 }
 
-.contact_button img {
+.contact__buttons img {
   position: absolute;
-  top: .625rem;
-  left: .5rem;
+  top: 0.625rem;
+  left: 0.5rem;
   text-align: center;
   width: 1.475rem;
   height: 1.375rem;
 }
 
 @media (min-width: 768px) {
-  .contact_content {
+  .contact__content {
     display: flex;
     margin-bottom: 6.25rem;
   }
 
-  .contact_description {
+  .contact__description {
     margin-top: 3.125rem;
     font-size: 1.375rem;
   }
 
-  .contact_button {
+  .contact__buttons {
     padding-left: 3.125rem;
   }
 
-  .contact_button a {
+  .contact__buttons a {
     width: 3rem;
     height: 3rem;
   }
 
-  .contact_button img {
+  .contact__buttons img {
     position: absolute;
-    top: .75rem;
-    left: .75rem;
+    top: 0.75rem;
+    left: 0.75rem;
     text-align: center;
     width: 1.475rem;
     height: 1.375rem;
@@ -599,11 +599,11 @@ a:hover {
 
 .footer {
   padding: 1.875rem;
-  font-size: .875rem;
+  font-size: 0.875rem;
   background-color: #f6b532;
 }
 
-.footer-copyright {
+.footer__copyright {
   text-align: center;
   color: #333;
 }
@@ -612,4 +612,4 @@ a:hover {
   .footer {
     height: 5rem;
   }
-}
+}/*# sourceMappingURL=style.css.map */
