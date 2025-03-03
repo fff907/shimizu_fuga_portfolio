@@ -1,10 +1,10 @@
 $(document).ready(function() {
 	// ハンバーガーメニューボタンのクリックイベント
-	$(".hamburger-button").click(function(event) {
-	$(".sp-nav").slideToggle();
+	$(".header__hamburger").click(function(event) {
+	$(".nav--sp").slideToggle();
 	});
 	// ナビゲーションリンクのクリックイベント
-	$(".sp-nav-list a").click(function(event) {
-	$(".sp-nav").slideUp();
+	$(".nav__list--sp a").click(function(event) {
+	$(".nav--sp").slideUp();
 	});
 	});
