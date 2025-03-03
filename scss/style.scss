@@ -241,7 +241,7 @@ a {
   object-fit: cover;
 }
 
-.about__text, .about__license {
+.about__text, .about__license,.about__github {
   padding-left: 1.125rem;
 }
 
@@ -261,6 +261,20 @@ a {
   font-size: 1.25rem;
   font-weight: bold;
   margin-top: 4.375rem;
+}
+
+.about__github {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.about__github a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.about__github a:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
