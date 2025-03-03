@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // サムネイルリンクをクリックしてポップアップを開く
-  $('.thumbnail-link').click(function (event) {
+  $('.works__thumbnail-link').click(function (event) {
       event.preventDefault(); // デフォルト動作を無効化
       const targetPopup = $(this).attr('href'); // リンク先のハッシュ（例: #popup）を取得
 
