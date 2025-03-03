@@ -244,7 +244,7 @@ a:hover {
      object-fit: cover;
 }
 
-.about__text, .about__license {
+.about__text, .about__license, .about__github {
   padding-left: 1.125rem;
 }
 
@@ -266,7 +266,6 @@ a:hover {
 }
 
 .about__github {
-  padding-left: 1.125rem;
   margin-top: 1.5rem;
   font-size: 1rem;
 }
