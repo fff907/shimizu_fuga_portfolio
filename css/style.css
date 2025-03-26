@@ -196,7 +196,12 @@ a:hover {
 }
 
 .cover__carousel {
+  display: flex;
   width: 100%;
+}
+
+.cover__carousel div {
+  flex: 0 0 100%; /* ← 1枚の画像を幅100%に広げる */
 }
 
 .cover__carousel img {
