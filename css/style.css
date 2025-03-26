@@ -232,6 +232,15 @@ a:hover {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1100px) {
+  .cover__catch {
+    left: 60%;
+    top: 28rem;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+  }
+}
+
 /* About
 ------------------------------------------------------------*/
 
