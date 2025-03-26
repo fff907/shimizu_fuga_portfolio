@@ -226,17 +226,21 @@ a:hover {
   }
 
   .cover__carousel img {
-    height: auto !important;
     width: 100%;
+    height: auto;
     object-fit: cover;
     display: block;
   }
 
   .cover__catch {
-    top: 28rem;
-    font-size: 1.2rem;
-    left: auto;
+    bottom: 2rem;
     right: 2rem;
+    left: auto;
+    top: auto;
+    transform: translateY(0);
+    font-size: 1.2rem;
+    position: absolute;
+    text-align: right;
   }
 }
 
