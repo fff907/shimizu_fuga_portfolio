@@ -204,6 +204,34 @@ a:hover {
      object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .cover, .cover__carousel img {
+    height: 43.75rem;
+    background-size: cover;
+  }
+}
+
+.cover__catch {
+  display: block;
+  position: absolute;
+  top: 5rem;
+  left: 1.25rem;
+  filter: drop-shadow(1px 1px 1px #333);
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .cover__catch {
+    display: block;
+    position: absolute;
+    top: 23.125rem;
+    left: 50.75rem;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1100px) {
   .cover__catch {
     top: 28rem;
