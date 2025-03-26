@@ -195,6 +195,10 @@ a:hover {
   overflow: hidden;
 }
 
+.cover__carousel {
+  width: 100%;
+}
+
 .cover__carousel img {
   width: 100%;
   height: auto;
@@ -202,7 +206,6 @@ a:hover {
   object-fit: cover;
 }
 
-/* キャッチコピー（中央配置） */
 .cover__catch {
   position: absolute;
   top: 50%;
