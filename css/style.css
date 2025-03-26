@@ -205,43 +205,38 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .cover, .cover__carousel img {
+  .cover {
     height: 43.75rem;
-    background-size: cover;
   }
-}
 
-.cover__catch {
-  display: block;
-  position: absolute;
-  top: 5rem;
-  left: 1.25rem;
-  filter: drop-shadow(1px 1px 1px #333);
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 400;
-  line-height: 1.5;
-}
+  .cover__carousel img {
+    height: 43.75rem;
+    object-fit: cover;
+  }
 
-@media (min-width: 768px) {
   .cover__catch {
-    display: block;
-    position: absolute;
     top: 23.125rem;
     left: 50.75rem;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1100px) {
-  .cover__carousel img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+  .cover {
+    height: auto !important;
   }
-  
+
+  .cover__carousel img {
+    height: auto !important;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
   .cover__catch {
     top: 28rem;
     font-size: 1.2rem;
+    left: auto;
+    right: 2rem;
   }
 }
 
