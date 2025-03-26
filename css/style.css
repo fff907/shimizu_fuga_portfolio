@@ -190,6 +190,7 @@ a:hover {
 .cover {
   position: relative;
   width: 100vw;
+  height: 100vh;
   padding-top: 3.75rem;
   color: #fff;
   overflow: hidden;
@@ -232,6 +233,7 @@ a:hover {
 
 .cover__carousel .slick-slide {
   width: 100% !important;
+  height: 100vh;
 }
 
 /* About
