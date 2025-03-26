@@ -5,6 +5,5 @@ $(document).ready(function(){
 		arrows: false, // 左右のナビゲーションを無効にする
 		dots: true, // スライド下にドットを表示する
 		fade: true, // スライドの切り替えをフェードにする
-		cssEase: 'linear'
 	});
 });
