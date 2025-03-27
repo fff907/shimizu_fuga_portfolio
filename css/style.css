@@ -218,6 +218,26 @@ a:hover {
   z-index: 10;
 }
 
+/* slick-slideに適用される画像の高さを強制的に上書き */
+.cover__carousel .slick-slide img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+/* slick-slide自体も高さを指定しておく */
+.cover__carousel .slick-slide {
+  height: 100vh !important;
+}
+
+/* slick-dots の表示位置修正（必要に応じて） */
+.slick-dots {
+  position: absolute;
+  bottom: 1.5rem !important;
+  width: 100%;
+  z-index: 20;
+}
+
 /* About
 ------------------------------------------------------------*/
 
