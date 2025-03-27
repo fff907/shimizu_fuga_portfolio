@@ -391,16 +391,6 @@ a:hover {
   padding: 0 1.25rem;
 }
 
-.works__item {
-  margin-bottom: 2rem;
-}
-
-.works__item img {
-  width: 100%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-
 .works__caption-title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -418,6 +408,7 @@ a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 .works__gallery img {
@@ -425,11 +416,23 @@ a:hover {
   max-width: 300px;
   height: auto;
   object-fit: cover;
+  display: block;
   margin: 0 auto;
+  transition: transform 0.3s ease;
 }
 
 .works__gallery img:hover {
   transform: scale(1.05);
+}
+
+.works__item {
+  margin-bottom: 2rem;
+}
+
+.works__item img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
 /* ポップアップ全体のスタイル */
