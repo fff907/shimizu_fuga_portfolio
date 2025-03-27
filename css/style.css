@@ -536,7 +536,6 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 1.875rem;
-    gap: 1.5rem;
   }
 
   .works__caption {
