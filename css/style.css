@@ -65,15 +65,6 @@ a:hover {
   text-decoration: none;
 }
 
-.img_mp,
-.works__gallery img,
-.works__item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-}
-
 @media (min-width: 768px) {
   .section__title {
     padding-top: 6.25rem;
@@ -83,22 +74,6 @@ a:hover {
 
   .text--break {
     display: none;
-  }
-  
-  .img_mp {
-    max-width: 432px;
-    height: auto;
-  }
-
-  .works__gallery img {
-    max-width: 300px;
-    height: auto;
-  }
-
-  .works__item img {
-    padding: 0;
-    max-width: 100%;
-    height: auto;
   }
 }
 
@@ -269,6 +244,16 @@ a:hover {
 /* About
 ------------------------------------------------------------*/
 
+.img_mp {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 26rem;
+  object-fit: cover;
+  vertical-align: bottom;
+  margin-bottom: 1.875rem;
+}
+
 .about__text, .about__license, .about__github {
   padding-left: 1.125rem;
 }
@@ -305,6 +290,11 @@ a:hover {
 }
 
 @media (min-width: 768px) {
+  .img_mp {
+    width: 432px;
+    height: 540px;
+  }
+  
   .about__body {
     display: flex;
   }
@@ -405,6 +395,12 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.works__item img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
 .works__caption-title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -418,8 +414,12 @@ a:hover {
 }
 
 .works__gallery img {
+  max-width: 100%;
+  height: auto;
   cursor: pointer;
   transition: transform 0.3s ease;
+  display: block;
+  margin: 0 auto;
 }
 
 .works__gallery img:hover {
@@ -537,6 +537,10 @@ a:hover {
   .works__item {
     width: 33.33%;
     text-align: center;
+  }
+
+  .works__item img {
+    padding: 0 1rem;
   }
 }
 
