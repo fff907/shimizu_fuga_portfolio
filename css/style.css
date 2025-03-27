@@ -248,6 +248,7 @@ a:hover {
   width: 100%;
   height: auto;
   vertical-align: bottom;
+  display: block;
   margin-bottom: 1.875rem;
   object-fit: cover;
   max-width: 432px;
