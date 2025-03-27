@@ -536,6 +536,7 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0 1.875rem;
+    gap: 1.5rem;
   }
 
   .works__caption {
@@ -551,6 +552,12 @@ a:hover {
 
   .works__container > .works__item > img {
     padding: 0 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .works__gallery img {
+    max-width: 90%;
   }
 }
 
