@@ -16,7 +16,7 @@ body {
 }
 
 html, body {
-  min-width: 360px;
+  min-width: 390px;
 }
 
 @media (min-width: 768px) {
