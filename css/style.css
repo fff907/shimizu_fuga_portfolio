@@ -19,12 +19,6 @@ html, body {
   min-width: 390px;
 }
 
-@media (min-width: 768px) {
-  body {
-    font-size: 1.375rem;
-  }
-}
-
 a {
   color: #333;
   text-decoration: none;
@@ -39,6 +33,12 @@ a:hover {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.375rem;
+  }
 }
 
 /* 共通のスタイル
@@ -65,6 +65,15 @@ a:hover {
   text-decoration: none;
 }
 
+.img_mp,
+.works__gallery img,
+.works__item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
 @media (min-width: 768px) {
   .section__title {
     padding-top: 6.25rem;
@@ -74,6 +83,22 @@ a:hover {
 
   .text--break {
     display: none;
+  }
+  
+  .img_mp {
+    max-width: 432px;
+    height: auto;
+  }
+
+  .works__gallery img {
+    max-width: 300px;
+    height: auto;
+  }
+
+  .works__item img {
+    padding: 0;
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -94,21 +119,8 @@ a:hover {
   box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
-  .header__logo {
-    margin-left: 5rem;
-  }
-}
-
 .img_logo {
   vertical-align: bottom;
-}
-
-@media (min-width: 768px) {
-  .img_logo {
-    width: auto;
-    max-width: 200px;
-  }
 }
 
 /* ハンバーガーメニューボタン */
@@ -121,13 +133,6 @@ a:hover {
   font-size: 1.9375rem;
   color: #333;
   cursor: pointer;
-}
-
-/* PCでの表示なし */
-@media (min-width: 890px) {
-  .header__hamburger {
-    display: none;
-  }
 }
 
 /* SPナビゲーション */
@@ -163,12 +168,6 @@ a:hover {
   display: none;
 }
 
-@media (min-width: 890px) {
-  .nav--pc {
-    display: block;
-  }
-}
-
 .nav__list--pc {
   display: flex;
   align-items: center;
@@ -182,6 +181,27 @@ a:hover {
 
 .nav__list--pc li {
   margin: 0 0 0 3.125rem;
+}
+
+@media (min-width: 768px) {
+  .header__logo {
+    margin-left: 5rem;
+  }
+
+  .img_logo {
+    width: auto;
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header__hamburger {
+    display: none;
+  }
+  
+  .nav--pc {
+    display: block;
+  }
 }
 
 /* カバー
@@ -249,15 +269,6 @@ a:hover {
 /* About
 ------------------------------------------------------------*/
 
-.img_mp {
-  width: 100%;
-  height: 24.5625rem;
-  vertical-align: bottom;
-  margin-bottom: 1.875rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .about__text, .about__license, .about__github {
   padding-left: 1.125rem;
 }
@@ -294,11 +305,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .img_mp {
-    width: 432px;
-    height: 540px;
-  }
-
   .about__body {
     display: flex;
   }
@@ -399,12 +405,6 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.works__item img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 .works__caption-title {
   font-size: 1.2rem;
   font-weight: bold;
@@ -417,10 +417,7 @@ a:hover {
   font-size: 1rem;
 }
 
-/* サムネイル画像のスタイル */
 .works__gallery img {
-  width: 300px;
-  height: 200px;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -500,7 +497,6 @@ a:hover {
   font-size: 1rem;
 }
 
-/* 閉じるボタンのスタイル */
 .close-btn {
   display: inline-block;
   color: #333;
@@ -541,11 +537,6 @@ a:hover {
   .works__item {
     width: 33.33%;
     text-align: center;
-  }
-
-  .works__item img {
-    width: 100%;
-    padding: 0 1rem;
   }
 }
 
