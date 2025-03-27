@@ -237,10 +237,6 @@ a:hover {
     left: 65%;
     transform: translateX(-50%) translateY(500%);
   }
-
-  .cover .slick-dots {
-    bottom: -2.5rem;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 820px) {
