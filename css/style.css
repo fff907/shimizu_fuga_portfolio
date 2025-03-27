@@ -413,14 +413,14 @@ a:hover {
   font-size: 1rem;
 }
 
-.works__thumbnail {
+.works__gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
 
-.works__thumbnail img {
+.works__gallery img {
   width: 100%;
   max-width: 300px;
   height: auto;
