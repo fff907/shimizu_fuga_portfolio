@@ -407,8 +407,8 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
   margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
 .works__gallery img {
@@ -544,6 +544,10 @@ a:hover {
     margin-bottom: 2rem;
   }
 
+  .works__gallery img {
+    margin: 0 0.5rem 2rem;
+  }
+
   .works__item {
     width: 33.33%;
     text-align: center;
@@ -554,9 +558,19 @@ a:hover {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1000px) {
+  .works__gallery {
+    justify-content: space-around;
+  }
+  .works__gallery img {
+    max-width: 45%;
+  }
+}
+
 @media (max-width: 767px) {
   .works__gallery img {
     max-width: 90%;
+    margin: 0 auto 1.5rem;
   }
 }
 
