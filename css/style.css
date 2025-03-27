@@ -396,7 +396,7 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.works__item img {
+.works__thumbnail-link img {
   width: 100%;
   object-fit: cover;
   margin-bottom: 1rem;
