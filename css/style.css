@@ -222,7 +222,7 @@ a:hover {
 
 .cover .slick-dots {
   position: absolute;
-  bottom: -2rem;
+  bottom: -1.8rem;
   width: 100%;
   text-align: center;
   z-index: 10;
