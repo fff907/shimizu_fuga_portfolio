@@ -246,12 +246,13 @@ a:hover {
 
 .img_mp {
   width: 100%;
-  max-width: 100%;
   height: auto;
-  max-height: 26rem;
-  object-fit: cover;
   vertical-align: bottom;
   margin-bottom: 1.875rem;
+  object-fit: cover;
+  max-width: 432px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about__text, .about__license, .about__github {
@@ -413,12 +414,18 @@ a:hover {
   font-size: 1rem;
 }
 
+.works__gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .works__gallery img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 300px;
   height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  display: block;
+  object-fit: cover;
   margin: 0 auto;
 }
 
