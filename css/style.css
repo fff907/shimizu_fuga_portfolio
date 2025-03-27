@@ -181,10 +181,14 @@ a:hover {
 
 .cover {
   position: relative;
-  padding-top: 3.75rem;
   width: 100%;
-  overflow: hidden;
+  padding-top: 3.75rem;
   color: #fff;
+  overflow: hidden;
+}
+
+.cover__carousel {
+  width: 100%;
 }
 
 .cover__carousel img {
@@ -199,16 +203,21 @@ a:hover {
   top: 26%;
   left: 26%;
   transform: translate(-50%, -50%);
-  font-size: 1.4rem;
+  color: #fff;
+  filter: drop-shadow(1px 1px 1px #333);
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
   text-align: center;
-  filter: drop-shadow(1px 1px 1px #333);
 }
 
-.slick-dots {
-  bottom: 1rem;
+.cover .slick-dots {
+  position: absolute;
+  bottom: -2rem;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
 }
 
 @media (min-width: 768px) {
@@ -221,14 +230,8 @@ a:hover {
     transform: translateX(-50%) translateY(500%);
   }
 
-  .slick-dots {
-    bottom: 2rem;
-  }
-}
-
-@media (min-width: 1100px) {
-  .cover__catch {
-    white-space: nowrap;
+  .cover .slick-dots {
+    bottom: -2.5rem;
   }
 }
 
