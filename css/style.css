@@ -399,7 +399,7 @@ a:hover {
 }
 
 .works__caption {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   font-size: 1rem;
 }
 
@@ -526,7 +526,7 @@ a:hover {
   }
 
   .works__gallery img {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto 1.5rem;
   }
 }
