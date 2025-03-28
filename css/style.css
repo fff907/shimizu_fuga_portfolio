@@ -248,7 +248,7 @@ a:hover {
 
 @media (min-width: 1260px) {
   .cover__carousel img {
-    object-position: center 70%;
+    object-position: center 75%;
   }
 }
 
