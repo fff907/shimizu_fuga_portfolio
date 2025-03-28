@@ -549,11 +549,11 @@ a:hover {
     justify-content: center;
     gap: 2rem;
     flex-wrap: nowrap;
-    padding: 0 1.875rem;
+    padding: 0 1rem;
   }
 
   .works__gallery img {
-    max-width: 320px;
+    max-width: 385px;
     height: 220px;
     margin: 0 auto 2rem;
   }
