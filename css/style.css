@@ -473,7 +473,6 @@ a:hover {
   width: 90%;
   max-width: 600px;
   max-height: 80%;
-  /* 縦長対応のスクロール設定 */
   overflow-y: auto;
   /* 縦スクロール有効化 */
   padding: 20px;
@@ -554,7 +553,8 @@ a:hover {
   }
 
   .works__gallery img {
-    max-width: 300px;
+    max-width: 320px;
+    height: 220px;
     margin: 0 auto 2rem;
   }
 
