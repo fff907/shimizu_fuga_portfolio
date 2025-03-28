@@ -9,6 +9,9 @@ $(document).ready(function () {
 
       // ポップアップを表示し、スクロール位置をリセット
       $(targetPopup).show().find('.popup-content').scrollTop(0);
+
+      // URLのハッシュ部分を更新
+      window.location.hash = targetPopup;
   });
 
   // 閉じるボタンをクリックしてポップアップを閉じる
