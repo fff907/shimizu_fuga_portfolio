@@ -222,6 +222,12 @@ a:hover {
   z-index: 10;
 }
 
+@media (max-width: 430px) {
+  .cover__carousel img {
+    object-position: right center;
+  }
+}
+
 @media (min-width: 768px) {
   .cover__carousel img {
     height: 43.75rem;
@@ -237,6 +243,12 @@ a:hover {
   .cover__catch {
     left: 60%;
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1260px) {
+  .cover__carousel img {
+    object-position: center bottom;
   }
 }
 
