@@ -98,7 +98,6 @@ a:hover {
   vertical-align: bottom;
 }
 
-/* ハンバーガーメニューボタン */
 .header__hamburger {
   display: flex;
   align-items: center;
@@ -261,6 +260,7 @@ a:hover {
 .about__text p {
   padding-bottom: 2.8125rem;
 }
+
 .about__text p:last-child {
   padding-bottom: 0;
 }
@@ -436,7 +436,6 @@ a:hover {
   padding: 0 1rem;
 }
 
-/* ポップアップ全体のスタイル */
 .popup {
   position: fixed;
   top: 0;
@@ -444,7 +443,6 @@ a:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
-  /* 背景の暗いオーバーレイ */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -460,7 +458,6 @@ a:hover {
   pointer-events: auto;
 }
 
-/* ポップアップオーバーレイ（背景クリック用） */
 .popup-overlay {
   position: absolute;
   top: 0;
@@ -470,7 +467,6 @@ a:hover {
   background: transparent;
 }
 
-/* ポップアップコンテンツ全体のスタイル */
 .popup-content {
   position: relative;
   background-color: #fff;
@@ -489,14 +485,12 @@ a:hover {
   gap: 15px;
 }
 
-/* ポップアップの画像スタイル */
 .popup-image {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-/* 説明テキストのスタイル */
 .popup-description {
   font-size: 16px;
   color: #333;
