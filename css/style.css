@@ -510,6 +510,12 @@ a:hover {
   padding-bottom: 1rem;
 }
 
+.popup-description strong {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
 .popup-url {
   font-size: 1rem;
 }
