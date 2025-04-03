@@ -189,15 +189,28 @@
                   <p class="works__caption-title">清水雅人 official site<br>(デザイン/コーディング)</p>
                   <a class="popup-url" href="https://shimizu-masato-official-site.netlify.app/">https://shimizu-masato-official-site.netlify.app/</a>
                   <p class="popup-description">私の父でありピアニストとして活動する、清水雅人のサイトを3週間ほどで制作しました。音楽が好きな人に興味を持ってもらえるよう、CDや新曲、配信ライブの購入を促すコンテンツを用意し、配色は無彩色＋紺を選び、落ち着いた、大人っぽい雰囲気をイメージしました。</p>
-　　　　　　　　　　<p class="popup-description">
-                   <strong>実装ポイント</strong><br>
-                    ・GSAPによるローディングアニメーション、ローディングバー演出、フェード制御などを導入。<br>
-                    ・画面幅に応じて背景を自動切替：<br>
-            　　   　　- PC（1100px以上）：動画背景<br>
-            　　   　　- スマホ（1100px未満）：静止画背景<br>
-                    ・resizeイベントによる動的切替も実装。<br>
-                    ・GitHubでバージョン管理し、コード構成も意識的に整理。<br>
-                    使用技術：HTML / CSS / JavaScript / GSAP
+　　　　　　　　　　<p class="popup-description" style="white-space:pre-wrap;">
+                    このサイトでは GSAPによるアニメーションを導入し、
+                    レスポンシブ対応 & ローディングアニメーションを実装しています。
+                    
+                    <strong>使用技術</strong>
+                    HTML / CSS / JavaScript / GSAP
+                    レスポンシブ対応（PC: 動画背景 / SP: 静止画背景）
+                    GitHubでバージョン管理
+                    
+                    <strong>ファイル構成</strong>
+                    css/フォルダにスタイルシートを管理
+                    js/gsap-animation.jsにGSAPのアニメーション処理を記述
+                    
+                    <strong>実装機能</strong>
+                    GSAPによるローディングアニメーション
+                    ローディングバーのアニメーション
+                    フェードイン / フェードアウト制御
+                    
+                    PC / モバイルの背景切り替え
+                    PC（1100px以上）：動画背景
+                    SP（1100px未満）：静止画背景
+                    resizeイベントで画面幅変更時も適用
                   </p>
                   
                   <!-- 閉じるボタン -->
