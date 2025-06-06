@@ -539,6 +539,16 @@ a:hover {
   background-color: #f0f0f0;
 }
 
+@media (max-width: 507px) {
+  .works__title + .works__description {
+    margin-top: 1.5rem;
+  }
+
+  .works__title {
+    margin-bottom: 0.5rem;
+  }
+}
+
 @media (max-width: 767px) {
   .works__description {
     margin: 1.5rem 1rem 2rem;
