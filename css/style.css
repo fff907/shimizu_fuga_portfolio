@@ -164,7 +164,7 @@ a:hover {
 
   .img_logo {
     width: auto;
-    max-width: 200px;
+    max-width: 12.5rem;
   }
 }
 
@@ -261,7 +261,7 @@ a:hover {
   vertical-align: bottom;
   display: block;
   object-fit: cover;
-  max-width: 432px;
+  max-width: 27rem;
   margin: 0 auto 2.5rem auto;
 }
 
@@ -303,8 +303,8 @@ a:hover {
 
 @media (min-width: 1000px) {
   .img_mp {
-    width: 432px;
-    height: 540px;
+    width: 27rem;
+    height: 33.75rem;
   }
   
   .about__body {
@@ -425,7 +425,7 @@ a:hover {
 
 .works__gallery img {
   width: 100%;
-  max-width: 300px;
+  max-width: 18.75rem;
   height: auto;
   object-fit: cover;
   display: block;
@@ -483,16 +483,16 @@ a:hover {
   position: relative;
   background-color: #fff;
   width: 90%;
-  max-width: 600px;
+  max-width: 37.5rem;
   max-height: 80%;
   overflow-y: auto;
-  padding: 20px;
+  padding: 1.25rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .popup-image {
@@ -502,7 +502,7 @@ a:hover {
 }
 
 .popup-description {
-  font-size: 16px;
+  font-size: 1rem;
   color: #333;
   line-height: 1.5;
   text-align: left;
@@ -512,7 +512,7 @@ a:hover {
 .popup-description strong {
   font-weight: bold;
   display: inline-block;
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
 }
 
 .popup-url {
@@ -525,8 +525,8 @@ a:hover {
   color: #333;
   border: 1px solid #333;
   border-radius: 3px;
-  padding: 1px 4px;
-  font-size: 14px;
+  padding: 0.0625rem 0.25rem;
+  font-size: 0.875rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -598,8 +598,8 @@ a:hover {
   }
 
   .works__gallery img {
-    max-width: 385px;
-    height: 220px;
+    max-width: 24.0625rem;
+    height: 13.75rem;
     margin: 0 auto 2rem;
   }
 
