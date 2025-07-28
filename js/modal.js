@@ -24,7 +24,6 @@
       modal.querySelector('.popup-content').scrollTop = 0;
       // ポップアップを開いた時に 内容のスクロール位置をリセット
     });
-  });
 
   close.addEventListener ('click', () => {
     modal.classList.add('hidden');
@@ -37,4 +36,5 @@
   mask.addEventListener('click', () => {
     close.click();
   });
+ });
 }
