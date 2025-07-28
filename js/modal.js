@@ -37,4 +37,6 @@
     close.click();
   });
  });
+ // スコープの概念に基づき、modal / close / mask.addEventListenerを
+ // forEachの「中」に入れる。
 }
