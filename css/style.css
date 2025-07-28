@@ -459,13 +459,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  opacity: 0;
-  /* 初期状態は非表示 */
-  pointer-events: none;
   transition: opacity 0.3s ease;
-}
-
-.popup:target {
   opacity: 1;
   pointer-events: auto;
 }
@@ -537,6 +531,11 @@ a:hover {
 
 .close-btn:hover {
   background-color: #f0f0f0;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 @media (max-width: 767px) {
