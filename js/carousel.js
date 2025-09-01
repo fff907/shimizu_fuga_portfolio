@@ -4,7 +4,8 @@
   const slides = document.querySelectorAll('.cover__carousel > div');
   let currentIndex = 0;
 
-  // 最初の1枚にactiveを付ける
+  // すべて非表示にしてから1つだけ表示
+  slides.forEach(slide => slide.classList.remove('active'));
   slides[currentIndex].classList.add('active');
 
   // 5秒ごとに切り替え
@@ -22,5 +23,5 @@
 
     // 新しいスライドにactiveをつける
     slides[currentIndex].classList.add('active');
-  }, 5000); // 5000ms = 5秒
+  }, 5000);
 }
