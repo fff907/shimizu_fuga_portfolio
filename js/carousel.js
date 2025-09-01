@@ -1,9 +1,26 @@
-$(document).ready(function(){
-	$('.cover__carousel').slick({
-		autoplay: true, // 自動再生
-		autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
-		arrows: false, // 左右のナビゲーションを無効にする
-		dots: true, // スライド下にドットを表示する
-		fade: true // スライドの切り替えをフェードにする
-	});
-});
+'use strict';
+
+{
+  const slides = document.querySelectorAll('.cover__carousel > div');
+  let currentIndex = 0;
+
+  // 最初の1枚にactiveを付ける
+  slides[currentIndex].classList.add('active');
+
+  // 5秒ごとに切り替え
+  setInterval(() => {
+    // 現在のスライドからactiveを外す
+    slides[currentIndex].classList.remove('active');
+
+    // 次のスライドに進む
+    currentIndex++;
+
+    // 最後までいったら最初に戻す
+    if (currentIndex === slides.length) {
+      currentIndex = 0;
+    }
+
+    // 新しいスライドにactiveをつける
+    slides[currentIndex].classList.add('active');
+  }, 5000); // 5000ms = 5秒
+}
