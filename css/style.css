@@ -192,15 +192,24 @@ a:hover {
 .cover__carousel {
   position: relative;
   width: 100%;
-  height: 25.625rem;
   overflow: hidden;
+}
+
+.cover__carousel > div {
+  display: none;
+  width: 100%;
+}
+
+.cover__carousel > div.active {
+  display: block;
 }
 
 .cover__carousel img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
+  vertical-align: bottom;
 }
 
 .cover__catch {
@@ -215,20 +224,7 @@ a:hover {
   line-height: 1.5;
   margin: 0;
   text-align: center;
-}
-
-.cover__carousel > div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 998;
-  transition: opacity 0.5s ease;
-}
-
-.cover__carousel > div.active {
-  opacity: 1;
-  z-index: 999;
+  z-index: 1000;
 }
 
 @media (max-width: 430px) {
@@ -238,10 +234,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-  .cover__carousel img {
-    height: 43.75rem;
-  }
-
   .cover__catch {
     left: 65%;
     transform: translateX(-50%) translateY(500%);
