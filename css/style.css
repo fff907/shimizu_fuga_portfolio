@@ -222,6 +222,26 @@ a:hover {
   z-index: 10;
 }
 
+.cover__carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cover__carousel > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 998;
+  transition: opacity 0.5s ease;
+}
+
+.cover__carousel > div.active {
+  opacity: 1;
+  z-index: 999;
+}
+
 @media (max-width: 430px) {
   .cover__carousel img {
     object-position: right center;
