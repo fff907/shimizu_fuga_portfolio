@@ -190,7 +190,10 @@ a:hover {
 }
 
 .cover__carousel {
+  position: relative;
   width: 100%;
+  overflow: hidden;
+  height: 25.625rem;
 }
 
 .cover__carousel img {
@@ -212,20 +215,6 @@ a:hover {
   line-height: 1.5;
   margin: 0;
   text-align: center;
-}
-
-.cover .slick-dots {
-  position: absolute;
-  bottom: -1.8rem;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-}
-
-.cover__carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
 }
 
 .cover__carousel > div {
@@ -740,3 +729,4 @@ a:hover {
     height: 5rem;
   }
 }/*# sourceMappingURL=style.css.map */
+
