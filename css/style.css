@@ -206,7 +206,6 @@ a:hover {
 
 .cover__carousel img {
   width: 100%;
-  height: auto;
   object-fit: cover;
   display: block;
   vertical-align: bottom;
@@ -234,10 +233,20 @@ a:hover {
   }
 }
 
+@media (max-width: 767px) {
+  .cover__carousel img {
+    height: 25.625rem;
+  }
+}
+
 @media (min-width: 768px) {
   .cover__catch {
     left: 65%;
     transform: translateX(-50%) translateY(500%);
+  }
+
+  .cover__carousel img {
+    height: 43.75rem;
   }
 }
 
