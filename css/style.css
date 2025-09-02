@@ -137,7 +137,6 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
-/* JavaScriptから付けるクラス（SPメニューの開閉制御） */
 .nav--sp.is-open {
   display: block;
 }
