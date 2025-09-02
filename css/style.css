@@ -197,11 +197,12 @@ a:hover {
 
 .cover__carousel > div {
   display: none;
-  width: 100%;
+/* すべてのスライドを一旦非表示(JS動作用➀) */
 }
 
 .cover__carousel > div.active {
   display: block;
+/*  1枚のスライドのみ表示に切り替え(JS動作用➁)  */
 }
 
 .cover__carousel img {
@@ -731,3 +732,4 @@ a:hover {
     height: 5rem;
   }
 }/*# sourceMappingURL=style.css.map */
+
