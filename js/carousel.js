@@ -1,9 +1,10 @@
 'use strict';
 
 {
-  // .cover__carousel 内のスライド（div要素）をすべて取得
-  // querySelectorAll → NodeList を返すため、forEach()が使える（＝HTMLCollectionと違い配列的）
   const slides = document.querySelectorAll('.cover__carousel > div');
+  // .cover__carousel 内のスライド（div要素）をすべて取得
+  // querySelectorAll → NodeList を返すため、forEach()が使える
+  //（子要素の.childrenと違って柔軟に扱える） 
 
   const dots = []; // ドットボタン（丸ボタン）を格納する配列
   let currentIndex = 0; // 現在表示中のスライドのインデックス
@@ -11,13 +12,17 @@
 
   // ドットボタンの生成＆追加処理
   function setupDots() {
-    // navタグを新たに作成 → ドットボタン群の意味的なまとまりを表す（ulより汎用的＆セマンティック）
     const nav = document.createElement('nav');
+    // navタグを新たに作成 → ドットボタン群の意味的なまとまりを表す
+    // （スライドを切り替えるドットボタン群は
+    //「ナビゲーションの役割」を持つため、意味的に<nav>タグが適しており、
+    // アクセシビリティやSEOの面で望ましい選択である。） 
     nav.classList.add('dots'); // CSSで整えるためのクラス名
 
-    // slidesの数だけボタンを作る。slidesはNodeListなのでforEachが使える
+    // slidesの数だけボタンを作る
     slides.forEach((_, index) => {
-      // 第1引数 _ は「スライド要素そのもの」。ここでは使わないため「捨て変数」としてアンダーバーにしている
+      // 第1引数 _ は「スライド要素そのもの」。
+      // ここでは使わないため「捨て変数」としてアンダーバーにしている
       // 第2引数 index は0,1,2...と連番で渡ってくるインデックス番号
 
       const button = document.createElement('button'); // ボタン生成
@@ -32,11 +37,11 @@
       nav.appendChild(button); // navタグの末尾にボタンを追加
     });
 
-    // .cover要素の末尾に<nav class="dots">を追加（HTML構造に反映）
     document.querySelector('.cover').appendChild(nav);
+    // .cover要素の末尾に<nav class="dots">を追加（HTML構造に反映）
 
-    // 初期状態で最初のドットだけに .current をつける（強調表示）
     dots[0].classList.add('current');
+    // 初期状態で最初のドットだけに .current をつける（強調表示）
   }
 
   // スライドとドットの表示を連動して更新
@@ -51,8 +56,8 @@
       dot.classList.toggle('current', i === index);
     });
 
-    // 現在のインデックスを更新（次回以降の計算に必要）
     currentIndex = index;
+    // 現在のインデックスを更新（次回以降の計算に必要）   
   }
 
   // 自動でスライドを進めるタイマー処理
