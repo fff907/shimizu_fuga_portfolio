@@ -228,6 +228,26 @@ a:hover {
   pointer-events: none;
 }
 
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #999;
+  cursor: pointer;
+}
+
+.dots button.current {
+  background-color: #fff;
+}
+
 @media (max-width: 430px) {
   .cover__carousel img {
     object-position: right center;
@@ -732,4 +752,3 @@ a:hover {
     height: 5rem;
   }
 }/*# sourceMappingURL=style.css.map */
-
