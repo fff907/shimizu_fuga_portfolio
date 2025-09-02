@@ -1,45 +1,41 @@
 'use strict';
 
 {
-  const slides = document.querySelectorAll('.cover__carousel > div');
-  const dots = []; // ドットボタンを格納する配列
+  const ul = document.querySelector('.cover__carousel');
+  const slides = ul.children;
+  const dots = [];
   let currentIndex = 0;
   let timer;
 
-  // ドットを生成・追加する関数
   function setupDots() {
     const nav = document.createElement('nav');
     nav.classList.add('dots');
-    slides.forEach((_, index) => {
+
+    for (let i = 0; i < slides.length; i++) {
       const button = document.createElement('button');
 
       button.addEventListener('click', () => {
-        showSlide(index);
+        showSlide(i);
         resetTimer();
       });
 
       dots.push(button);
       nav.appendChild(button);
-    });
+    }
 
-    document.querySelector('.cover').appendChild(nav); // cover内の末尾にnav追加
-    dots[0].classList.add('current'); // 初期表示にcurrentをつける
+    document.querySelector('.cover').appendChild(nav);
+    dots[0].classList.add('current');
   }
 
-  // スライドとドットを同期して表示
   function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('current', i === index);
-    });
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.toggle('active', i === index);
+      dots[i].classList.toggle('current', i === index);
+    }
 
     currentIndex = index;
   }
 
-  // 自動再生のためのタイマー
   function startTimer() {
     timer = setInterval(() => {
       const nextIndex = (currentIndex + 1) % slides.length;
