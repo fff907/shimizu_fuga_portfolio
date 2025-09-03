@@ -22,17 +22,17 @@
   　// } else { document.body.style.overflow = ''; } }); の短縮型
     // 'hidden'＝真のときの値＝スクロールを止める
     // isOpen ? → isOpenならば // : '' → そうでなければ空文字＝スクロールを戻す
+  });
   
   // メニュー内リンクをクリックで閉じる
   navLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
   });
   
-    // 1000pxを超えたらメニューを自動で閉じる
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1000) {
-        closeMenu();
-      }
-    });
-  }
+  // 1000pxを超えたらメニューを自動で閉じる
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1000) {
+      closeMenu();
+    }
+  });
 }
