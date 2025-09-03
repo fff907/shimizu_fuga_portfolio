@@ -98,13 +98,13 @@ a:hover {
   vertical-align: bottom;
 }
 
-/* ハンバーガーメニュー（三本線 → ×に変形） */
+/* ハンバーガーメニュー（三本線＋×変形） */
 .header__hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 2rem;
-  height: 1.5rem; /* ← 修正：24px */
+  height: 1.25rem;
   cursor: pointer;
 }
 
@@ -115,11 +115,10 @@ a:hover {
   background-color: #333;
   border-radius: 2px;
   transition: transform 0.3s, opacity 0.3s;
-  position: relative;
 }
 
 .header__hamburger.is-active span:nth-child(1) {
-  transform: translateY(7.5px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .header__hamburger.is-active span:nth-child(2) {
@@ -127,7 +126,7 @@ a:hover {
 }
 
 .header__hamburger.is-active span:nth-child(3) {
-  transform: translateY(-7.5px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* SPナビゲーション */
