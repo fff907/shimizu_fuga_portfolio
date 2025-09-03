@@ -28,8 +28,8 @@
         <img src="./images/logo.png" class="img_logo" alt="FUGA SHIMIZU PORTFOLIO">
       </a>
     
-      <!-- ハンバーガーボタン：三本線 -->
-      <button class="header__hamburger" id="open" aria-label="menu" aria-expanded="false">
+      <!-- ハンバーガーメニューボタン：三本線 -->
+      <button class="header__hamburger" id="open" aria-label="メニューを開く" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -47,8 +47,12 @@
     </header>
     
     <!-- SPナビゲーション：オーバーレイ -->
-    <div class="overlay">
+    <div class="overlay" id="overlay">
       <div class="overlay__inner">
+    
+        <!-- SPナビゲーションを閉じるボタン -->
+        <button class="overlay__close" id="close" aria-label="メニューを閉じる"></button>
+    
         <nav class="nav--sp">
           <ul class="nav__list--sp">
             <li><a href="#about">About</a></li>
