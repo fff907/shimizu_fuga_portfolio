@@ -79,14 +79,13 @@ a:hover {
 
 /* ヘッダー
 ------------------------------------------------------------*/
-
 .header {
   position: fixed;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
+  z-index: 3000;
   width: 100%;
   height: 3.75rem;
   padding: 0 1.25rem;
@@ -98,6 +97,7 @@ a:hover {
   vertical-align: bottom;
 }
 
+/* SPオーバーレイ */
 .overlay {
   position: fixed;
   top: 0;
@@ -118,6 +118,38 @@ a:hover {
 
 .overlay__inner {
   padding: 6rem 2.5rem 2.5rem;
+  position: relative;
+}
+
+.overlay__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay__close::before,
+.overlay__close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.5rem;
+  height: 2px;
+  background-color: #333;
+  transform-origin: center;
+}
+
+.overlay__close::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.overlay__close::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 /* SPナビゲーション */
@@ -140,13 +172,15 @@ a:hover {
 /* ハンバーガーメニュー（三本線＋×変形） */
 .header__hamburger {
   position: relative;
-  z-index: 9999;
+  z-index: 3001;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 2rem;
   height: 1.25rem;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 
 .header__hamburger span {
