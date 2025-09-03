@@ -98,22 +98,41 @@ a:hover {
   vertical-align: bottom;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background-color: #f6b532;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay__inner {
+  padding: 6rem 2.5rem 2.5rem;
+}
+
+.overlay__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
 /* SPナビゲーション */
 .nav--sp {
-  position: absolute;
-  top: 3.75rem;
-  left: 0;
-  display: none;
-  z-index: 1000;
-  width: 100%;
-  height: 25.7rem;
-  padding: 2.5rem;
   font-family: Emblema One;
   font-size: 1.5rem;
   text-align: center;
-  background-color: #f6b532;
-  border-bottom: 1px solid #cdcdcd;
-  box-sizing: border-box;
 }
 
 .nav__list--sp {
@@ -124,10 +143,6 @@ a:hover {
 
 .nav__list--sp li {
   margin-bottom: 2.5rem;
-}
-
-.nav--sp.is-open {
-  display: block;
 }
 
 /* ハンバーガーメニュー（三本線＋×変形） */
@@ -199,6 +214,10 @@ a:hover {
 
   .nav--pc {
     display: block;
+  }
+
+  .overlay {
+    display: none;
   }
 }
 
