@@ -139,6 +139,7 @@ a:hover {
 
 /* ハンバーガーメニュー（三本線＋×変形） */
 .header__hamburger {
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
