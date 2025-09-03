@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/905f598671.js" crossorigin="anonymous"></script>
     <!-- favicon -->
     <link rel="icon" type="image/png" href="icon-192x192.png">
     <link rel="apple-touch-icon" type="image/png" href="apple-touch-icon-180x180.png">
@@ -27,7 +25,12 @@
     <!-- ヘッダー -->
     <header class="header">
       <a href="index.html" class="header__logo"><img src="./images/logo.png" class="img_logo" alt="FUGA SHIMIZU PORTFOLIO"></a>
-      <div class="header__hamburger"><i class="fas fa-bars" aria-label="menu"></i></div>
+      <!-- ハンバーガーボタン：三本線 -->
+      <div class="header__hamburger" aria-label="menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
       <!-- SPナビゲーション -->
       <nav class="nav--sp">
