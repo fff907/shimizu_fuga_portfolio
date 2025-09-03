@@ -1,4 +1,5 @@
 'use strict';
+
 {
   const open = document.getElementById('open');
   const overlay = document.getElementById('overlay');
@@ -20,8 +21,7 @@
     // if (isOpen) { document.body.style.overflow = 'hidden';
   　// } else { document.body.style.overflow = ''; } }); の短縮型
     // 'hidden'＝真のときの値＝スクロールを止める
-    // isOpen ? → isOpenならば
-    // : '' → そうでなければ空文字＝スクロールを戻す
+    // isOpen ? → isOpenならば // : '' → そうでなければ空文字＝スクロールを戻す
   
   // メニュー内リンクをクリックで閉じる
   navLinks.forEach(link => {
