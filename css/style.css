@@ -245,7 +245,11 @@ a:hover {
   }
 
   .overlay.show ~ .header .nav--pc {
-  display: none !important;
+    display: none !important; /* PCナビだけ非表示 */
+  }
+
+  .overlay__close {
+    display: block !important; /* 閉じるボタンは常に表示 */
   }
 }
 
