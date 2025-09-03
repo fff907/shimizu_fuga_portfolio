@@ -1,22 +1,28 @@
 'use strict';
 
 {
-  const hamburger = document.querySelector('.header__hamburger');
-  const nav = document.querySelector('.nav--sp');
-  const navLinks = document.querySelectorAll('.nav__list--sp a');
+  const open = document.getElementById('open');         // ハンバーガー（三本線）
+  const overlay = document.querySelector('.overlay');   // オーバーレイ背景＋メニュー
+  const close = document.getElementById('close');        // ×ボタン
+  const navLinks = document.querySelectorAll('.nav__list--sp a'); // 各ナビリンク
 
-  // ハンバーガーボタンをクリックしたとき、メニューを開閉
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('is-open'); // メニュー表示,非表示を切り替える
-    hamburger.classList.toggle('is-active'); // ボタンの状態も切り替え
+  // ハンバーガーをクリックするとオーバーレイを表示
+  open.addEventListener('click', () => {
+    overlay.classList.add('show');
+    open.classList.add('is-active');
   });
 
-  // ナビ内のリンクをクリックしたらメニューを閉じる
+  // ×ボタンでオーバーレイを閉じる
+  close.addEventListener('click', () => {
+    overlay.classList.remove('show');
+    open.classList.remove('is-active');
+  });
+
+  // 各リンククリックでもオーバーレイを閉じる
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      nav.classList.remove('is-open');
-      hamburger.classList.remove('is-active');
+      overlay.classList.remove('show');
+      open.classList.remove('is-active');
     });
   });
 }
-
