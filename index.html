@@ -22,33 +22,14 @@
   </head>
 
   <body>
-    <!-- SPナビゲーション：オーバーレイ（※ header の前に移動） -->
-    <div class="overlay" id="overlay">
-      <div class="overlay__inner">
-    
-        <!-- SPナビゲーションを閉じるボタン -->
-        <button class="overlay__close" id="close" aria-label="メニューを閉じる"></button>
-    
-        <nav class="nav--sp">
-          <ul class="nav__list--sp">
-            <li><a href="#about">About</a></li>
-            <li><a href="#timeline">Timeline</a></li>
-            <li><a href="#works">Works</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-    
-      </div>
-    </div>
-    
     <!-- ヘッダー -->
     <header class="header">
       <a href="index.html" class="header__logo">
         <img src="./images/logo.png" class="img_logo" alt="FUGA SHIMIZU PORTFOLIO">
       </a>
     
-      <!-- ハンバーガーメニューボタン：三本線 -->
-      <button class="header__hamburger" id="open" aria-label="メニューを開く" aria-expanded="false">
+      <!-- 三本線ハンバーガーメニュー -->
+      <button class="header__hamburger" id="open">
         <span></span>
         <span></span>
         <span></span>
@@ -64,6 +45,22 @@
         </ul>
       </nav>
     </header>
+    
+    <!-- SPナビゲーション：オーバーレイ -->
+    <div class="overlay" id="overlay">
+      <div class="overlay__inner"> 
+        
+        <!-- SPナビゲーション -->
+        <nav class="nav--sp">
+          <ul class="nav__list--sp">
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>    
+      </div>
+    </div>
 
     <!-- メイン -->
     <main>
