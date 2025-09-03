@@ -106,18 +106,18 @@ a:hover {
   z-index: 2000;
   width: 100%;
   height: 100%;
-  background-color: rgba(246, 181, 50, 0.95);
-  opacity: 0;
+  background-color: rgba(246, 181, 50, 0.95); /* オーバーレイ */
+  opacity: 0; /* 最初は非表示 */
   pointer-events: none;
   transition: opacity 0.3s ease;
 }
 
-.global-nav.show {
+.global-nav.show { /* JSで`.show`クラスが付いた時に表示 */
   opacity: 1;
   pointer-events: auto;
 }
 
-.nav__list {
+.nav__list { /* SP用のリスト配置 */
   list-style: none;
   padding: 6rem 2.5rem 2.5rem;
   margin: 0;
@@ -130,8 +130,8 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
-/* ハンバーガーメニュー */
-.header__hamburger {
+/* ハンバーガーメニュー(3本線のスタイル) */
+.header__hamburger { 
   position: relative;
   z-index: 3001;
   display: flex;
@@ -144,7 +144,7 @@ a:hover {
   border: none;
 }
 
-.header__hamburger span {
+.header__hamburger span { /* 3本線のうちの1本 */
   display: block;
   height: 3px;
   width: 100%;
@@ -182,7 +182,7 @@ a:hover {
   }
 
   .global-nav {
-    position: static;
+    position: static; /* position: fixed（全画面に重なる表示）から通常の横並びへ */
     opacity: 1;
     pointer-events: auto;
     height: auto;
@@ -190,7 +190,7 @@ a:hover {
     display: block;
   }
 
-  .nav__list {
+  .nav__list { /* PC用のリスト配置 */
     display: flex;
     justify-content: flex-end;
     align-items: center;
