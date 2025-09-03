@@ -1,4 +1,4 @@
-''use strict';
+'use strict';
 
 {
   const open = document.getElementById('open'); // 三本線ボタン
