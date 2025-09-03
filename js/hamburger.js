@@ -30,4 +30,13 @@
   if (close) {
     close.addEventListener('click', closeMenu);
   }
+
+  // 画面幅変更を監視してSPナビ開いてたら強制的に閉じる
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1000) {
+      document.querySelector('.overlay').classList.remove('show');
+      document.getElementById('open').classList.remove('is-active');
+      document.body.style.overflow = '';
+    }
+  });
 }
