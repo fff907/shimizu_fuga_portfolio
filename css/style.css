@@ -120,14 +120,6 @@ a:hover {
   padding: 6rem 2.5rem 2.5rem;
 }
 
-.overlay__close {
-  position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
-  cursor: pointer;
-  font-size: 2rem;
-}
-
 /* SPナビゲーション */
 .nav--sp {
   font-family: Emblema One;
