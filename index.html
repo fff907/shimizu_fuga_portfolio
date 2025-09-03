@@ -24,24 +24,17 @@
   <body>
     <!-- ヘッダー -->
     <header class="header">
-      <a href="index.html" class="header__logo"><img src="./images/logo.png" class="img_logo" alt="FUGA SHIMIZU PORTFOLIO"></a>
+      <a href="index.html" class="header__logo">
+        <img src="./images/logo.png" class="img_logo" alt="FUGA SHIMIZU PORTFOLIO">
+      </a>
+    
       <!-- ハンバーガーボタン：三本線 -->
-      <div class="header__hamburger" aria-label="menu" aria-expanded="false">
+      <div class="header__hamburger" id="open" aria-label="menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </div>
-
-      <!-- SPナビゲーション -->
-      <nav class="nav--sp">
-        <ul class="nav__list--sp">
-          <li><a href="#about">About</a></li>
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      
+    
       <!-- PCナビゲーション -->
       <nav class="nav--pc">
         <ul class="nav__list--pc">
@@ -52,6 +45,23 @@
         </ul>
       </nav>
     </header>
+    
+    <!-- SPナビゲーション：オーバーレイ -->
+    <div class="overlay">
+      <div class="overlay__inner">
+        <div class="overlay__close" id="close" aria-label="close">
+          <span class="material-icons">close</span>
+        </div>
+        <nav class="nav--sp">
+          <ul class="nav__list--sp">
+            <li><a href="#about">About</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
     <!-- メイン -->
     <main>
