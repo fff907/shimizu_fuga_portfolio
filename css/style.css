@@ -98,15 +98,35 @@ a:hover {
   vertical-align: bottom;
 }
 
+/* ハンバーガーメニュー（三本線 → ×に変形） */
 .header__hamburger {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 3.75rem;
-  height: 3.75rem;
-  font-size: 1.9375rem;
-  color: #333;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.25rem;
   cursor: pointer;
+}
+
+.header__hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.header__hamburger.is-active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.header__hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* SPナビゲーション */
@@ -176,7 +196,7 @@ a:hover {
   .header__hamburger {
     display: none;
   }
-  
+
   .nav--pc {
     display: block;
   }
