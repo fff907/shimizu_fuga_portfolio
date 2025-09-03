@@ -98,37 +98,6 @@ a:hover {
   vertical-align: bottom;
 }
 
-/* ハンバーガーメニュー（三本線＋×変形） */
-.header__hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 2rem;
-  height: 1.25rem;
-  cursor: pointer;
-}
-
-.header__hamburger span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background-color: #333;
-  border-radius: 2px;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.header__hamburger.is-active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.header__hamburger.is-active span:nth-child(2) {
-  opacity: 0;
-}
-
-.header__hamburger.is-active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
 /* SPナビゲーション */
 .nav--sp {
   position: absolute;
@@ -159,6 +128,37 @@ a:hover {
 
 .nav--sp.is-open {
   display: block;
+}
+
+/* ハンバーガーメニュー（三本線＋×変形） */
+.header__hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.header__hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.header__hamburger.is-active span:nth-child(1) {
+  transform: translateY(8.5px) rotate(45deg);
+}
+
+.header__hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-active span:nth-child(3) {
+  transform: translateY(-8.5px) rotate(-45deg);
 }
 
 /* PCナビゲーション */
