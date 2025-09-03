@@ -4,25 +4,30 @@
   const open = document.getElementById('open');
   const overlay = document.querySelector('.overlay');
   const navLinks = document.querySelectorAll('.nav__list--sp a');
+  const close = document.querySelector('.overlay__close');
 
+  const closeMenu = () => {
+    overlay.classList.remove('show');
+    open.classList.remove('is-active');
+    document.body.style.overflow = '';
+  };
+
+  // ハンバーガークリック時：開閉
   open.addEventListener('click', () => {
     const isOpen = overlay.classList.toggle('show');
     open.classList.toggle('is-active');
 
     // スクロール禁止・解除
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
+    document.body.style.overflow = isOpen ? 'hidden' : '';
   });
 
-  // 各リンククリックでもメニューを閉じてスクロール再開
+  // メニューリンククリック時：閉じる
   navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      overlay.classList.remove('show');
-      open.classList.remove('is-active');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', closeMenu);
   });
+
+  // ×ボタンで閉じる
+  if (close) {
+    close.addEventListener('click', closeMenu);
+  }
 }
