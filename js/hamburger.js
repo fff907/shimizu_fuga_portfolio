@@ -1,17 +1,17 @@
 'use strict';
 
 {
-  const open = document.getElementById('open');         // ハンバーガー（三本線）
-  const overlay = document.querySelector('.overlay');   // オーバーレイ背景＋メニュー
-  const navLinks = document.querySelectorAll('.nav__list--sp a'); // 各ナビリンク
-
-  // ハンバーガーをクリックするとオーバーレイを表示
+  const open = document.getElementById('open');
+  const overlay = document.querySelector('.overlay');
+  const navLinks = document.querySelectorAll('.nav__list--sp a');
+  
+  // ハンバーガーをクリックするとオーバーレイを開閉
   open.addEventListener('click', () => {
-    overlay.classList.add('show');
-    open.classList.add('is-active');
+    overlay.classList.toggle('show');
+    open.classList.toggle('is-active');
   });
 
-  // 各リンククリックでもオーバーレイを閉じる
+  // 各リンククリック時はメニューを閉じる
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       overlay.classList.remove('show');
