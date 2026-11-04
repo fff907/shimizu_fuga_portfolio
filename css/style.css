@@ -16,8 +16,9 @@ body {
 }
 
 html, body {
-  min-width: 24.375rem;
+  min-width: 20rem;
 }
+
 
 a {
   color: #333;
@@ -603,7 +604,11 @@ a:hover {
   pointer-events: none;
 }
 
+
+/* Works：スマートフォン
+------------------------------------------------------------*/
 @media (max-width: 767px) {
+
   .works__description {
     margin: 1.5rem 1rem 2rem;
   }
@@ -617,66 +622,35 @@ a:hover {
     align-items: center;
   }
 
-  .works__gallery {
-    display: block;
-    padding: 0;
-  }
-
-  .works__gallery img {
-    width: calc(100% + 2rem);
-    margin: 0 -1rem 1.5rem;
-    max-width: none;
-  }
-}
-
-@media (min-width: 508px) and (max-width: 767px) {
-  .works__gallery img {
-    width: 100%;
-    margin: 0 auto 1.5rem;
-  }
-}
-
-/* Writing / Interview 見出しのスマホ対応 */
-@media (max-width: 767px) {
   .works__title--writing {
     font-size: clamp(1.6rem, 7vw, 2.5rem);
     margin-left: 0;
   }
+
+  .works__gallery {
+    padding: 0;
+  }
 }
 
-@media (min-width: 768px) and (max-width: 1000px) {
+/* Works：タブレット
+------------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1199px) {
+
   .works__description {
     margin: 1.5rem 1rem 2rem;
   }
 
   .works__gallery {
-    display: block;
     padding: 0 2rem;
-  }
-
-  .works__gallery img {
-    max-width: 90%;
-    margin: 0 auto 2rem;
   }
 }
 
-@media (min-width: 1001px) {
-  .works__gallery {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: nowrap;
-    padding: 0 1rem;
-  }
-
-  .works__gallery img {
-    max-width: 24.0625rem;
-    height: 13.75rem;
-    margin: 0 auto 2rem;
-  }
+/* Works：PC
+------------------------------------------------------------*/
+@media (min-width: 1200px) {
 
   .works__item {
-    width: 33.33%;
+    width: 33.333%;
     text-align: center;
   }
 
