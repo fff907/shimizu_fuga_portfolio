@@ -475,18 +475,25 @@ a:hover {
 
 .works__gallery {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 2rem;
   padding: 0 1rem;
 }
 
-.works__gallery img {
-  width: 100%;
-  max-width: 18.75rem;
-  height: auto;
-  object-fit: cover;
+/* Projects / Writing 共通のサムネイルリンク */
+.works__thumbnail-link {
   display: block;
+  width: 100%;
+  max-width: 24.0625rem;
+}
+
+/* Projects / Writing 共通の画像サイズ */
+.works__gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 7 / 4;
+  object-fit: cover;
   margin: 0 auto 1rem;
   transition: transform 0.3s ease;
 }
@@ -595,35 +602,6 @@ a:hover {
   opacity: 0;
   pointer-events: none;
 }
-
-
-/* Writing / Interview サムネイルサイズ統一
-------------------------------------------------------------*/
-
-.works__container--writing .works__thumbnail-link {
-  display: block;
-  width: 100%;
-  max-width: 24.0625rem;
-  margin: 0 auto;
-}
-
-.works__container--writing .works__gallery img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 7 / 4;
-  object-fit: cover;
-  margin: 0 auto 1rem;
-}
-
-/* PC：既存Projectsと同じ画像高さ */
-@media (min-width: 1001px) {
-  .works__container--writing .works__gallery img {
-    height: 13.75rem;
-  }
-}
-
 
 @media (max-width: 767px) {
   .works__description {
