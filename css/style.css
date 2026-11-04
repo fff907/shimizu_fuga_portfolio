@@ -629,6 +629,14 @@ a:hover {
   }
 }
 
+/* Writing / Interview 見出しのスマホ対応 */
+@media (max-width: 767px) {
+  .works__title--writing {
+    font-size: clamp(1.6rem, 7vw, 2.5rem);
+    margin-left: 0;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1000px) {
   .works__description {
     margin: 1.5rem 1rem 2rem;
