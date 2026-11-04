@@ -614,16 +614,12 @@ a:hover {
   }
 
   .works__title {
-    font-size: 2.5rem;
+    font-size: clamp(1.6rem, 7vw, 2.5rem);
     padding-top: 2.5rem;
     padding-bottom: 1rem;
     line-height: 1.2;
     flex-direction: column;
     align-items: center;
-  }
-
-  .works__title--writing {
-    font-size: clamp(1.6rem, 7vw, 2.5rem);
     margin-left: 0;
   }
 
