@@ -596,6 +596,35 @@ a:hover {
   pointer-events: none;
 }
 
+
+/* Writing / Interview サムネイルサイズ統一
+------------------------------------------------------------*/
+
+.works__container--writing .works__thumbnail-link {
+  display: block;
+  width: 100%;
+  max-width: 24.0625rem;
+  margin: 0 auto;
+}
+
+.works__container--writing .works__gallery img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 7 / 4;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+}
+
+/* PC：既存Projectsと同じ画像高さ */
+@media (min-width: 1001px) {
+  .works__container--writing .works__gallery img {
+    height: 13.75rem;
+  }
+}
+
+
 @media (max-width: 767px) {
   .works__description {
     margin: 1.5rem 1rem 2rem;
