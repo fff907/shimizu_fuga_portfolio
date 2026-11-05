@@ -34,6 +34,7 @@ a:hover {
   max-width: 85.9375rem;
   margin: 0 auto;
   padding: 0 2rem;
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
@@ -131,7 +132,7 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
-/* ハンバーガーメニュー(3本線のスタイル) */
+/* ハンバーガーメニュー */
 .header__hamburger { 
   position: relative;
   z-index: 3001;
@@ -378,6 +379,122 @@ a:hover {
   }
 }
 
+/* Skills
+------------------------------------------------------------*/
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.skills__card {
+  min-width: 0;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(51, 51, 51, 0.08);
+}
+
+.skills__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 0.875rem;
+  color: #9a6809;
+  background: #fff3d7;
+  border-radius: 0.75rem;
+}
+
+.skills__icon svg {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.skills__card-title {
+  margin-bottom: 0.625rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.skills__card-text {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+}
+
+.skills__tools {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.75rem;
+}
+
+.skills__tools-title {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.skills__tools-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 1.5rem;
+}
+
+.skills__tools-item {
+  min-width: 0;
+}
+
+.skills__tools-label {
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.skills__tools-text {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 600px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px) {
+  .skills__tools-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .skills__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1000px) {
+  .nav__list {
+    gap: 1.5rem;
+    margin-right: 2rem;
+    font-size: 1.375rem;
+  }
+
+  .nav__list li {
+    margin: 0;
+  }
+}
+
 /* Timeline
 ------------------------------------------------------------*/
 
@@ -481,14 +598,12 @@ a:hover {
   padding: 0 1rem;
 }
 
-/* Projects / Writing 共通のサムネイルリンク */
 .works__thumbnail-link {
   display: block;
   width: 100%;
   max-width: 24.0625rem;
 }
 
-/* Projects / Writing 共通の画像サイズ */
 .works__gallery img {
   display: block;
   width: 100%;
@@ -591,7 +706,6 @@ a:hover {
   cursor: pointer;
   transition: all 0.3s ease;
   line-height: 1;
-  /* 縦方向の余白を詰める */
   margin: 0 auto;
 }
 
@@ -604,9 +718,6 @@ a:hover {
   pointer-events: none;
 }
 
-
-/* Works：スマートフォン
-------------------------------------------------------------*/
 @media (max-width: 767px) {
 
   .works__description {
@@ -628,8 +739,6 @@ a:hover {
   }
 }
 
-/* Works：タブレット
-------------------------------------------------------------*/
 @media (min-width: 768px) and (max-width: 1199px) {
 
   .works__description {
@@ -641,8 +750,6 @@ a:hover {
   }
 }
 
-/* Works：PC
-------------------------------------------------------------*/
 @media (min-width: 1200px) {
 
   .works__item {
