@@ -392,8 +392,8 @@ a:hover {
   min-width: 0;
   padding: 1.5rem;
   background: #fff;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 12px rgba(51, 51, 51, 0.08);
+  border-radius: 0.25rem;
+  box-shadow: none;
 }
 
 .skills__icon {
@@ -402,9 +402,9 @@ a:hover {
   width: 3rem;
   height: 3rem;
   margin-bottom: 0.875rem;
-  color: #9a6809;
-  background: #fff3d7;
-  border-radius: 0.75rem;
+  color: #333;
+  background: transparent;
+  border-radius: 0;
 }
 
 .skills__icon svg {
@@ -420,13 +420,13 @@ a:hover {
 
 .skills__card-title {
   margin-bottom: 0.625rem;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.4;
 }
 
 .skills__card-text {
-  font-size: 0.9375rem;
+  font-size: 1.125rem;
   line-height: 1.75;
 }
 
@@ -434,7 +434,7 @@ a:hover {
   margin-top: 2rem;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 0.75rem;
+  border-radius: 0.25rem;
 }
 
 .skills__tools-title {
@@ -455,14 +455,22 @@ a:hover {
 
 .skills__tools-label {
   margin-bottom: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 .skills__tools-text {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.7;
   overflow-wrap: anywhere;
+}
+
+.skills__tools-note {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  font-size: 0.9375rem;
+  line-height: 1.75;
 }
 
 @media (min-width: 600px) {
