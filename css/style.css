@@ -19,7 +19,6 @@ html, body {
   min-width: 20rem;
 }
 
-
 a {
   color: #333;
   text-decoration: none;
@@ -100,7 +99,6 @@ a:hover {
   vertical-align: bottom;
 }
 
-/* ナビゲーション共通 */
 .global-nav {
   position: fixed;
   top: 0;
@@ -132,7 +130,6 @@ a:hover {
   margin-bottom: 2.5rem;
 }
 
-/* ハンバーガーメニュー */
 .header__hamburger { 
   position: relative;
   z-index: 3001;
@@ -225,12 +222,11 @@ a:hover {
 
 .cover__carousel > div {
   display: none;
-/* すべてのスライドを一旦非表示(JS動作用➀) */
 }
 
 .cover__carousel > div.active {
   display: block;
-/*  1枚のスライドのみ表示に切り替え(JS動作用➁)  */
+/*  1枚のスライドのみ表示に切り替え(JS動作用)  */
 }
 
 .cover__carousel img {
@@ -567,6 +563,12 @@ a:hover {
   }
 }
 
+@media (max-width: 767px) {
+  .timeline .section__title {
+    font-size: clamp(2.5rem, 12vw, 3.25rem);
+  }
+}
+
 /* Works
 ------------------------------------------------------------*/
 
@@ -865,6 +867,16 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .contact__buttons {
+    column-gap: 1.25rem;
+  }
+
+  .contact__buttons a {
+    box-sizing: border-box;
+  }
 }
 
 /* フッター
